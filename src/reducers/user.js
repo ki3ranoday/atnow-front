@@ -11,6 +11,10 @@ export default function (state=initialState, action) {
                 ...state,
                 uid: action.payload
             };
+        case ActionTypes.SIGN_UP:
+            return {
+                ...action.payload
+            }
         default:
             return state;
     }
