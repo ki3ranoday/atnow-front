@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import { Text, View } from 'react-native';
-import {signUp} from '..actions';
+import { Text, View, TextInput, Button } from 'react-native';
+import {signUp} from '../actions';
 
-class signupPage extends Component {
+class SignUpPage extends Component {
     constructor(props){
         super(props);
         this.state={
@@ -57,10 +57,10 @@ class signupPage extends Component {
                     value={this.state.confirmPassword}
                     placeholder="confirm password"
                 />
-                <Button onClick={this.handleSubmit}>Submit</Button>
+                <Button onClick={this.handleSubmit} title="submit"/>
             </View>
         )
     }
 }
 
-export default connect(null, {signUp})(signupPage)
+export default connect(null, {signUp})(SignUpPage);

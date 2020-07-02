@@ -1,15 +1,15 @@
 import {connect} from 'react-redux';
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import { Text, View, Button } from 'react-native'
 import {signIn} from '../actions';
 
-class landingPage extends Component {
+class LandingPage extends Component {
     render() {
         return (
             <View>
                 <Text> Landing Page </Text>
-                <Text> Sign in </Text>
-                <Text> Sign up </Text>
+                <Text onPress={() => this.props.navigation.navigate('signIn')}> Sign in </Text>
+                <Text onPress={() => this.props.navigation.navigate('signUp')}> Sign up </Text>
             </View>
         )
     }
@@ -20,4 +20,4 @@ const mapStateToProps = (state) => {
         uid: state.user.uid
     }
 }
-export default connect(mapStateToProps, {signIn})(landingPage);
+export default connect(mapStateToProps, {signIn})(LandingPage);

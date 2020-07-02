@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Text, View, TextInput, Button } from 'react-native'
 
-class signinPage extends Component {
+class SignInPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -23,9 +23,10 @@ class signinPage extends Component {
                     value={this.state.password}
                     placeholder="password"
                 />
-                <Button onClick={() => this.props.signIn(name)} />
+                <Button onClick={() => this.props.signIn(name)} title="submit"/>
             </View>
         )
     }
 }
+export default SignInPage;
 
